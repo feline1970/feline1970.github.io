@@ -229,6 +229,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/28/面试题-理解js中类相关的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="feline">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feline's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/28/面试题-理解js中类相关的问题/" itemprop="url">面试题-理解js中类相关的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-28T19:25:28+08:00">
+                2018-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>JS 有哪些数据类型？</li>
+</ol>
+<p><strong>答案：7种数据类型。String，Number，Boolean，Object，undefined，null symbol（es6）。</strong></p>
+<ul>
+<li><p>Object包括：Array，Function，RegExp，Date等</p>
+</li>
+<li><p>NaN属于Number</p>
+</li>
+<li><p>答案出现（数组，函数，正则，日期，NaN）直接滚！！！</p>
+</li>
+</ul>
+<ol>
+<li>JS如何判断一个对象是否属于某个类</li>
+</ol>
+<p><strong>答案：typeof，instanceof，constructor。不过以上三种方式都有问题，可以自己写一个函数去判断，使用toString+call。</strong></p>
+<p>【typeof】</p>
+<ul>
+<li>作用：检测数据类型，以小写字符串的形式返回数据类型。</li>
+<li>如何使用：typeof 对象</li>
+<li>可以检测：String，Number，Boolean，Funciton，Object，undefined（返回undefined），未赋值的变量（也返回”undefined”）</li>
+<li>不可以检测：null，Array，RegExp，Date等（返回”object”）</li>
+</ul>
+<p>【instanceof】</p>
+<ul>
+<li>作用：判断已知对象类型正确与否，返回布尔值。</li>
+<li>如何使用：对象 instanceof 对象类型（大小写不能错<strong>）</strong></li>
+<li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)】弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
+<li>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</li>
+</ul>
+<p>【constructor】</p>
+<ul>
+<li>作用：跟instanceof类似，但是我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。</li>
+<li>如何使用：对象.constructor == 对象类型（大小写不能错）</li>
+<li>可以检测：</li>
+<li>不可以检测：null，undefined，未赋值的变量（报错）</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/25/Hi-My-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -386,7 +542,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
