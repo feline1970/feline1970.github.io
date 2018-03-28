@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Feline&#39;s Blog">
 <meta property="og:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T11:46:45.000Z">
+<meta property="og:updated_time" content="2018-03-28T13:16:55.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-理解js中类相关的问题">
 <meta name="twitter:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
@@ -306,27 +306,29 @@
 <li>答案出现（数组，函数，正则，日期，NaN）直接滚！！！</li>
 </ul>
 <p>2.JS如何判断一个对象是否属于某个类？<br><strong>答案：typeof，instanceof，constructor。不过以上三种方式都有问题，可以自己写一个函数去判断，使用toString+call。</strong></p>
-<p><strong>typeof</strong></p>
+<p>【typeof】</p>
 <ul>
 <li>作用：检测数据类型，以小写字符串的形式返回数据类型。</li>
 <li>如何使用：typeof 对象</li>
 <li>可以检测：String，Number，Boolean，Funciton，Object，undefined（返回undefined），未赋值的变量（也返回”undefined”）</li>
 <li>不可以检测：null，Array，RegExp，Date等（返回”object”）</li>
 </ul>
-<p><strong>instanceof</strong></p>
+<p>【instanceof】</p>
 <ul>
 <li>作用：判断已知对象类型正确与否，返回布尔值。</li>
 <li>如何使用：对象 instanceof 对象类型（大小写不能错<strong>）</strong></li>
 <li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)】弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
 <li>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</li>
 </ul>
-<p><strong>constructor</strong></p>
+<p>【constructor】</p>
 <ul>
 <li>作用：跟instanceof类似，但是我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。</li>
 <li>如何使用：对象.constructor == 对象类型（大小写不能错）</li>
 <li>可以检测：</li>
 <li>不可以检测：null，undefined，未赋值的变量（报错）</li>
 </ul>
+<p>【通用方案】<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isDateType(date, <span class="built_in">type</span>)&#123;</span><br><span class="line">	var thisType = Object.prototype.toString.call(date).slice(8,-1);</span><br><span class="line">	<span class="keyword">if</span>(thisType === <span class="built_in">type</span>)&#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//传入两个参数，第一个是要检测的数据，第二个是要检测的数据类型。</span><br><span class="line">//注意：第二个参数要加引号，并且首字母大写。</span><br><span class="line">isDateType(<span class="string">"111"</span>,<span class="string">"String"</span>);</span><br><span class="line">//<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>【完美方案：jq】<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jquery.type(date);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
