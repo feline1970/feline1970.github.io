@@ -300,43 +300,25 @@
       
         
           
-            <ol>
-<li>JS 有哪些数据类型？</li>
-</ol>
+            <p>1.JS有哪些数据类型？</p>
 <p><strong>答案：7种数据类型。String，Number，Boolean，Object，undefined，null symbol（es6）。</strong></p>
-<ul>
-<li><p>Object包括：Array，Function，RegExp，Date等</p>
-</li>
-<li><p>NaN属于Number</p>
-</li>
-<li><p>答案出现（数组，函数，正则，日期，NaN）直接滚！！！</p>
-</li>
-</ul>
-<ol>
-<li>JS如何判断一个对象是否属于某个类</li>
-</ol>
+<p>*Object包括：Array，Function，RegExp，Date等</p>
+<p>*NaN属于Number</p>
+<p>*答案出现（数组，函数，正则，日期，NaN）直接滚！！！</p>
+<p>2.JS如何判断一个对象是否属于某个类？</p>
 <p><strong>答案：typeof，instanceof，constructor。不过以上三种方式都有问题，可以自己写一个函数去判断，使用toString+call。</strong></p>
-<p>【typeof】</p>
-<ul>
-<li>作用：检测数据类型，以小写字符串的形式返回数据类型。</li>
-<li>如何使用：typeof 对象</li>
-<li>可以检测：String，Number，Boolean，Funciton，Object，undefined（返回undefined），未赋值的变量（也返回”undefined”）</li>
-<li>不可以检测：null，Array，RegExp，Date等（返回”object”）</li>
-</ul>
-<p>【instanceof】</p>
-<ul>
-<li>作用：判断已知对象类型正确与否，返回布尔值。</li>
-<li>如何使用：对象 instanceof 对象类型（大小写不能错<strong>）</strong></li>
-<li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)】弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
-<li>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</li>
-</ul>
-<p>【constructor】</p>
-<ul>
-<li>作用：跟instanceof类似，但是我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。</li>
-<li>如何使用：对象.constructor == 对象类型（大小写不能错）</li>
-<li>可以检测：</li>
-<li>不可以检测：null，undefined，未赋值的变量（报错）</li>
-</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof</span><br></pre></td></tr></table></figure>
+<p><em>作用：检测数据类型，以小写字符串的形式返回数据类型。
+</em>如何使用：typeof 对象<br><em>可以检测：String，Number，Boolean，Funciton，Object，undefined（返回undefined），未赋值的变量（也返回”undefined”）
+</em>不可以检测：null，Array，RegExp，Date等（返回”object”）</p>
+<p><strong>instanceof</strong></p>
+<p><em>作用：判断已知对象类型正确与否，返回布尔值。
+</em>如何使用：对象 instanceof 对象类型（大小写不能错<strong>）</strong><br><em>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)】弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。
+</em>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</p>
+<p><strong>constructor</strong></p>
+<p><em>作用：跟instanceof类似，但是我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。
+</em>如何使用：对象.constructor == 对象类型（大小写不能错）<br><em>可以检测：
+</em>不可以检测：null，undefined，未赋值的变量（报错）</p>
 
           
         
