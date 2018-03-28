@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Feline&#39;s Blog">
 <meta property="og:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T14:06:08.000Z">
+<meta property="og:updated_time" content="2018-03-28T14:08:47.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-理解js中类相关的问题">
 <meta name="twitter:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
@@ -317,7 +317,7 @@
 <ul>
 <li>作用：判断已知对象类型正确与否，返回布尔值。</li>
 <li>如何使用：对象 instanceof 对象类型（大小写不能错）</li>
-<li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)】   弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
+<li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)<br>弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
 <li>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</li>
 </ul>
 <p>【constructor】</p>
