@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -79,17 +79,15 @@
 
 
 
-<meta name="description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试题-理解js中类相关的问题">
-<meta property="og:url" content="http://yoursite.com/2018/03/28/面试题-理解js中类相关的问题/index.html">
+<meta property="og:title" content="Flex布局之容器属性">
+<meta property="og:url" content="http://yoursite.com/2018/03/29/Flex布局之容器属性/index.html">
 <meta property="og:site_name" content="Feline&#39;s Blog">
-<meta property="og:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T14:08:47.248Z">
+<meta property="og:updated_time" content="2018-03-30T03:08:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试题-理解js中类相关的问题">
-<meta name="twitter:description" content="1.JS有哪些数据类型？答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。  Object包括：Array，Function，RegExp，Date等 NaN属于Number 答案出现（数组，函数，正则，日期，NaN）直接滚！！！  2.JS如何判断一个对象是否属于某个类？答案：typeof，instanceof，c">
+<meta name="twitter:title" content="Flex布局之容器属性">
 
 
 
@@ -119,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/28/面试题-理解js中类相关的问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/29/Flex布局之容器属性/"/>
 
 
 
 
 
-  <title>面试题-理解js中类相关的问题 | Feline's Blog</title>
+  <title>Flex布局之容器属性 | Feline's Blog</title>
   
 
 
@@ -232,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/28/面试题-理解js中类相关的问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/29/Flex布局之容器属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="feline">
@@ -249,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面试题-理解js中类相关的问题</h1>
+          <h1 class="post-title" itemprop="name headline">Flex布局之容器属性</h1>
         
 
         <div class="post-meta">
@@ -261,8 +259,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-28T19:25:28+08:00">
-                2018-03-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-29T18:56:29+08:00">
+                2018-03-29
               </time>
             
 
@@ -299,37 +297,7 @@
       
 
       
-        <p>1.JS有哪些数据类型？<br><strong>答案：7种数据类型。String，Number，Boolean，Object，undefined，null，Symbol（es6）。</strong></p>
-<ul>
-<li>Object包括：Array，Function，RegExp，Date等</li>
-<li>NaN属于Number</li>
-<li>答案出现（数组，函数，正则，日期，NaN）直接滚！！！</li>
-</ul>
-<p>2.JS如何判断一个对象是否属于某个类？<br><strong>答案：typeof，instanceof，constructor。不过这三种方式都有问题，可以自己写一个函数去判断，使用Object原型上的toString方法+call+slice。</strong></p>
-<p>【typeof】</p>
-<ul>
-<li>作用：检测数据类型，以小写字符串的形式返回数据类型。</li>
-<li>如何使用：typeof 对象</li>
-<li>可以检测：String，Number，Boolean，Funciton，Object，undefined（返回undefined），未赋值的变量（也返回”undefined”）</li>
-<li>不可以检测：null，Array，RegExp，Date等（返回”object”）</li>
-</ul>
-<p>【instanceof】</p>
-<ul>
-<li>作用：判断已知对象类型正确与否，返回布尔值。</li>
-<li>如何使用：对象 instanceof 对象类型（大小写不能错）</li>
-<li>可以检测：Array，Function，new出来的基本数据类型的值【eg:new String(‘111’)，new Number(111)，new Boolean(true)<br>弊端：只要在当前实例的原型链上，我们用其检测出来的结果都是true。比如上述所有的数据类型的值也都是Object类型。</li>
-<li>不可以检测：null，undefined，字面量方式创建的基本数据类型的值（返回false），未赋值的变量（报错）</li>
-</ul>
-<p>【constructor】</p>
-<ul>
-<li>作用：跟instanceof类似，但是我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。</li>
-<li>如何使用：对象.constructor == 对象类型（大小写不能错）</li>
-<li>可以检测：String，Number，Boolean，Funciton，Object<br>弊端：我们可以把类的原型进行重写，重写的过程中很有可能把之前的constructor覆盖了，这样检测出来的结果是不准确的。</li>
-<li>不可以检测：null，undefined，未赋值的变量（报错）</li>
-</ul>
-<p>【完美方案】<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isDateType(date, <span class="built_in">type</span>)&#123;</span><br><span class="line">	var thisType = Object.prototype.toString.call(date).slice(8,-1);</span><br><span class="line">	<span class="keyword">if</span>(thisType === <span class="built_in">type</span>)&#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//传入两个参数，第一个是要检测的数据，第二个是要检测的数据类型。</span><br><span class="line">//注意：第二个参数要加引号，并且首字母大写。</span><br><span class="line">isDateType(<span class="string">"111"</span>,<span class="string">"String"</span>);</span><br><span class="line">//<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>【简单方案：jq】<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jquery.type(date);</span><br></pre></td></tr></table></figure></p>
-
+        
       
     </div>
     
@@ -344,6 +312,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
 
       
       
@@ -353,8 +327,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/25/Hi-My-blog/" rel="next" title="Hey,My Blog">
-                <i class="fa fa-chevron-left"></i> Hey,My Blog
+              <a href="/2018/03/28/理解js中类相关的问题/" rel="next" title="面试题-理解js中类相关的问题">
+                <i class="fa fa-chevron-left"></i> 面试题-理解js中类相关的问题
               </a>
             
           </div>
@@ -433,7 +407,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -441,6 +415,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
